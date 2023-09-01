@@ -34,4 +34,11 @@ class AuthController extends Controller
         
         return view('auth.dashboard', compact('user'));
     }
+
+    public function logout()
+{
+    Auth::logout();
+
+    return redirect()->route('login');
+}
 }

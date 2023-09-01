@@ -18,7 +18,11 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('mainpage');
+});
+
+Route::get('/page', function () {
+    return view('page');
 });
 
 Route::get('/dashboard', [AuthController::class, 'index'])->middleware('auth')->name('dashboard');
@@ -31,3 +35,4 @@ Route::post('/login', [AuthController::class,'login']);
 Route::get('/register', [RegisterController::class, 'showRegistrationForm']);
 Route::post('/register', [RegisterController::class,'register'])->name('register');
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
