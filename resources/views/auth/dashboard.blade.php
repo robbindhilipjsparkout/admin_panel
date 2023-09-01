@@ -180,12 +180,11 @@ i {
 		left: -25px;
 	}
 }
-
-    </style>
-    
+</style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
         <a class="navbar-brand navbar-logo" href="#">Admin Panel</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars text-white"></i>
@@ -193,19 +192,20 @@ i {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                <form method="POST" action="{{ route('logout') }}">
-    @csrf
-    <button type="submit" style="background-color: white; color: blue; border: 1px solid blue; border-radius: 5px; font-size: 15px;padding:7px;">Logout</button>
-
-</form>
-</li>
-</ul>
-</div>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" style="background-color: white; color: blue; border: 1px solid blue; border-radius: 5px; font-size: 15px; padding: 7px;">Logout</button>
+                    </form>
+                </li>
+                <li>
+                    <p style="font-family: Times New Roman, Times, serif; margin-left:1000px; margin-top: 10px;">Email: {{ $user->email }}</p>
+                </li>
+            </ul>
+        </div>
     </nav>
     <br>
     <div class="user-info">
         <h1 style="font-family: Times New Roman, Times, serif;">Welcome to the Dashboard, {{ $user->name }}!</h1>
-        <p>Email: {{ $user->email }}</p>
     </div>
 </body>
 </html>

@@ -200,7 +200,7 @@ i {
                     <a class="nav-link" href="{{ route('register') }} " style="background-color: white; color: blue; border: 1px solid blue; border-radius: 5px; font-size: 15px;padding:7px;"><i class="far fa-clone"></i>Sign-Up</a>
                 </li>
             </ul>
-</div>
+         </div>
     </nav>
 </body>
 </html>

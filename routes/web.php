@@ -21,9 +21,7 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
-Route::get('/page', function () {
-    return view('page');
-});
+
 
 Route::get('/dashboard', [AuthController::class, 'index'])->middleware('auth')->name('dashboard');
 

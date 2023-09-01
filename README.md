@@ -52,26 +52,34 @@ MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 
-Create database 
-
-admin_panel
-
-To Install composer 
-
-composer install
-
-For migrating database 
-
-php artisan migrate
+Create database:   admin_panel
 
 
-For seeder 
+
+To Install composer:  composer install
+
+
+
+For migrating database: php artisan migrate
+
+
+
+For seeder:
 
 php artisan db:seed
-
-To serve this project
-
-php artisan serve
+php artisan db:seed --class=UsersSeeder
 
 
 
+To serve this project: php artisan serve
+
+
+
+Basic Flow of the Task :
+
+Mainpage : Go to the default route ('/'); 
+There user can Sign-In or Sign-Up 
+After Sign-In the user can see there user name and email id that they used for login 
+and a logout button for logout the user in the dashboard page , after loggin out the user redirects to the mainpage.
+If the user was a new user , they register they're name, email, phn_number and password that creditanls have been stored in the database
+after that user can Sign-In.
