@@ -73,7 +73,7 @@ php artisan db:seed --class=UsersSeeder
 
 To serve this project: php artisan serve
 
-
+For mail configuration , I have used https://mailtrap.io/inboxes/ for sending mail and OTP after the user registered.
 
 Basic Flow of the Task :
 
