@@ -16,7 +16,11 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
-	background: #e7f0fd;
+	
+	background-image: url('images/bg.jpg'); 
+
+        background-repeat: no-repeat;
+		background-size: cover;
 }
 * {
 	margin: 0;
